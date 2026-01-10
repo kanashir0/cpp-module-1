@@ -1,0 +1,14 @@
+# Object files
+obj/
+*.o
+
+# Binaries
+brainz
+moar_brainz
+hi_this_is_brain
+unnecessary_violence
+sed_is_for_losers
+harl_2.0
+
+# Temporary files (Ex04)
+*.replace
