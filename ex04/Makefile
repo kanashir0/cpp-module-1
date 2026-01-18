@@ -25,6 +25,7 @@ $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp
 
 clean:
 	@rm -rf $(OBJ_DIR)
+	@rm -f *.replace
 
 fclean: clean
 	@printf "$(RED)[Cleaning]$(NC)\n"

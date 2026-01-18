@@ -11,11 +11,6 @@ std::string Sed::_readFile(void) const {
     std::ifstream ifs(this->_filename.c_str());
     if (!ifs.is_open()) {
         std::cerr << "Error: could not open file " << this->_filename << std::endl;
-        // In a real generic class we might throw, but here we just exit or return empty.
-        // Returning empty might be ambiguous (empty file vs error).
-        // Let's exit(1) or similar as simple error handling is permitted.
-        // Better: return empty and handle it in replace?
-        // Or throw invalid_argument.
         throw std::invalid_argument("File not found or unreadable");
     }
     
@@ -46,7 +41,6 @@ void Sed::replace(std::string s1, std::string s2) {
     try {
         content = this->_readFile();
     } catch (const std::exception& e) {
-        // Error already logged in _readFile if needed, or we catch here.
         return;
     }
 
@@ -55,16 +49,11 @@ void Sed::replace(std::string s1, std::string s2) {
     size_t matchPos = content.find(s1, pos);
 
     while (matchPos != std::string::npos) {
-        // Append part before match
         result.append(content, pos, matchPos - pos);
-        // Append replacement
         result.append(s2);
-        // Advance pos
         pos = matchPos + s1.length();
-        // Find next
         matchPos = content.find(s1, pos);
     }
-    // Append remaining part
     result.append(content, pos, std::string::npos);
 
     try {
