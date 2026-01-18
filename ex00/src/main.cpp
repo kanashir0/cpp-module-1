@@ -2,10 +2,10 @@
 
 int main(void) {
     std::cout << "--- Stack allocation (randomChump) ---" << std::endl;
-    randomChump("ChumpStack");
+    randomChump("StackZombie");
 
     std::cout << "\n--- Heap allocation (newZombie) ---" << std::endl;
-    Zombie* heapZombie = newZombie("HeapZ");
+    Zombie* heapZombie = newZombie("HeapZombie");
     heapZombie->announce();
     delete heapZombie;
 
