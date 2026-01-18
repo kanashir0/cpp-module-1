@@ -1,4 +1,4 @@
-NAME = harl_2.0
+NAME = harl_2_0
 
 RED = \033[0;31m
 GREEN = \033[0;32m

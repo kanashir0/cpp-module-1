@@ -8,22 +8,22 @@ Harl::~Harl() {
 
 void Harl::debug(void) {
     std::cout << "[ DEBUG ]" << std::endl;
-    std::cout << "I love having extra bacon for my 7XL-double-cheese-triple-pickle-special-ketchup burger. I really do!" << std::endl;
+    std::cout << "Eu amo ter bacon extra para o meu hambúrguer 7XL-duplo-queijo-triplopicles-ketchup-especial. Eu realmente amo!" << std::endl;
 }
 
 void Harl::info(void) {
     std::cout << "[ INFO ]" << std::endl;
-    std::cout << "I cannot believe adding extra bacon costs more money. You didn't put enough bacon in my burger! If you did, I wouldn't be asking for more!" << std::endl;
+    std::cout << "Eu não acredito que adicionar bacon extra custa mais dinheiro. Vocês não colocaram bacon suficiente no meu hambúrguer! Se vocês tivessem colocado, eu não estaria pedindo por mais!" << std::endl;
 }
 
 void Harl::warning(void) {
     std::cout << "[ WARNING ]" << std::endl;
-    std::cout << "I think I deserve to have some extra bacon for free. I've been coming for years whereas you started working here since last month." << std::endl;
+    std::cout << "Eu acho que mereço ter bacon extra de graça. Eu venho aqui há anos, enquanto você começou a trabalhar aqui apenas no mês passado." << std::endl;
 }
 
 void Harl::error(void) {
     std::cout << "[ ERROR ]" << std::endl;
-    std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
+    std::cout << "Isto é inaceitável! Eu quero falar com o gerente agora." << std::endl;
 }
 
 void Harl::complain(std::string level) {
@@ -46,6 +46,4 @@ void Harl::complain(std::string level) {
             return;
         }
     }
-    // Optional: Print nothing or error if level not found. Subject doesn't specify strictly what to do for unknown levels in Ex05 (Ex06 does).
-    // Usually Harl complains only if he knows what to complain about.
 }
